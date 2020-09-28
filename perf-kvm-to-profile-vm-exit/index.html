@@ -12,15 +12,22 @@
     gtag('config', 'UA-115014323-1');
   </script>
   <meta charset="utf-8">
-  <title>East River Village</title>
+  <title>perf kvm to profile vm_exit | East River Village</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="East River Village">
-<meta property="og:url" content="https://eastrivervillage.com/tags/devpost/index.html">
+  <meta name="description" content="Profiling VM_EXIT reasons with `perf kvm` tool">
+<meta name="keywords" content="linux,perf">
+<meta property="og:type" content="article">
+<meta property="og:title" content="perf kvm to profile vm_exit">
+<meta property="og:url" content="https://eastrivervillage.com/perf-kvm-to-profile-vm-exit/index.html">
 <meta property="og:site_name" content="East River Village">
+<meta property="og:description" content="Profiling VM_EXIT reasons with `perf kvm` tool">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://eastrivervillage.com/images/music-equalizer-1.jpg">
+<meta property="og:updated_time" content="2020-09-28T13:16:13.370Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="East River Village">
+<meta name="twitter:title" content="perf kvm to profile vm_exit">
+<meta name="twitter:description" content="Profiling VM_EXIT reasons with `perf kvm` tool">
+<meta name="twitter:image" content="https://eastrivervillage.com/images/music-equalizer-1.jpg">
   <link rel="icon" href="/favicon.ico">
   
   
@@ -40,121 +47,33 @@
   <link rel="stylesheet" href="/css/style.css">
   
 <script type="application/ld+json">
-  [
   {
-    "@context": "http://schema.org",
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "perf kvm to profile vm_exit",
+  "name": "perf kvm to profile vm_exit",
+  "image": "/images/music-equalizer-1.jpg",
+  "datePublished": "2020-09-28T12:50:47.000Z",
+  "dateModified": "2020-09-28T13:16:13.370Z",
+  "mainEntityOfPage": {
     "@type": "WebPage",
-    "name": "East River Village",
-    "description": "enjoy the sunshine",
-    "author": {
-      "@type": "Person",
-      "name": "Balakumaran Kannan",
-      "image": "/images/profile_author.jpg",
-      "description": "System software engineer specilied in Linux. Experience spans from ARM32 board bring-up to multi datacenter cloud management. Open source contributer. From Bangalore, India."
-    }
+    "@id": "https://eastrivervillage.com/perf-kvm-to-profile-vm-exit/index.html"
   },
-  {
-    "@context": "http://schema.org",
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "url": "/Virtual-memory-to-Physical-memory/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "url": "/about/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "url": "/Add-swap-space-to-Ubuntu/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "url": "/Auto-deploy-from-Bitbucket-or-any-other-git-repository/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "url": "/Configure-Vim/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "url": "/VNC-setup-in-Digitalocean/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 7,
-        "url": "/git-from-facebook/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 8,
-        "url": "/KGDB-KDB-over-serial-with-RaspberryPi/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 9,
-        "url": "/debugging-application-with-cross-gdb-yocto/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 10,
-        "url": "/The-Volatile-keyword/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 11,
-        "url": "/perf-kvm-to-profile-vm-exit/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 12,
-        "url": "/Variadic-functions-with-unknown-argument-count/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 13,
-        "url": "/The-Linux-COW/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 14,
-        "url": "/Raspberry-Pi-dishes-from-Yocto-cuisine/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 15,
-        "url": "/KGDBoE-on-RaspberryPi-building-out-of-the-kernel-tree-module-with-yocto/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 16,
-        "url": "/64-bit-Mainline-kernel-on-Raspberry-Pi-3/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 17,
-        "url": "/Custom-build-kernel-for-Raspberry-Pi/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 18,
-        "url": "/Anatomy-of-Linux-system-call-in-ARM64/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 19,
-        "url": "/kexec-tools-with-the-hidden-purgatory/"
-      }
-    ]
+  "author": {
+    "@type": "Person",
+    "name": "Balakumaran Kannan",
+    "image": "/images/profile_author.jpg",
+    "description": "System software engineer specilied in Linux. Experience spans from ARM32 board bring-up to multi datacenter cloud management. Open source contributer. From Bangalore, India."
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Balakumaran Kannan",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/profile_author.jpg"
+    }
   }
-]
+}
 </script>
 
   
@@ -184,36 +103,56 @@
   <div class="container">
     <div class="columns">
       <div style="overflow:hidden;" class="main column">
-        <div class="archive">
-  
-      <h2 class="archive-title subtitle is-4">devpost</h2>
-  
-  
-    <article class="archive-item media">
-      <!--figure class="archive-thumbnail media-left">
-        
-  <img src="/images/github_from_facebook.png" class="thumbnail is-10x6" alt="Github from Facebook">
+        <article class="post">
+  <figure class="post-thumbnail">
+    
+  <img src="/images/music-equalizer-1.jpg" class="thumbnail " alt="perf kvm to profile vm_exit">
 
 
-      </figure-->
-      <div class="media-content">
-        <div class="content">
-          2018-03-01
+  </figure>
+  <span>2020-09-28
+</span>
+  <h1 class="title">perf kvm to profile vm_exit</h1>
+  
+  <div class="tags">
+    
+      <a class="tag is-white" style="color: darkmagenta; padding-left:0;" href="/tags/linux/">linux</a>
+    
+      <a class="tag is-white" style="color: darkmagenta; padding-left:0;" href="/tags/perf/">perf</a>
+    
+  </div>
 
-          <h2 class="archive-title title is-5">
-            <a href="/git-from-facebook/">
-              Github from Facebook
-            </a>
-          </h3>
-          <p style="font-size:1em;">
-            
-          </p>
-        </div>
+
+  <div class="content">
+    <p>Optimizing VM_EXITs will significantly improve performance VMs. All the major improvements in VM world is mainly focusing on reducing the number of VM_EXITs. To optimize it, first we should able to measure it. Initially the tool <code>kvm_stat</code> was designed for this purpose, later it has been added inside <code>perf</code> itself.</p>
+<p>To profile VM_EXITs while running <code>sysbench</code>,</p>
+<ul>
+<li>Get <code>pid</code> of the VM task - 127894</li>
+<li>Get the IP of that machine - 192.168.122.194<br>  Make sure you can ssh to that machine without password</li>
+<li>Install <code>sysbench</code> inside the VM</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">$ sudo perf kvm <span class="built_in">stat</span> record -p 127894 ssh 192.168.122.194 -l test_user <span class="string">"sysbench --test=cpu --cpu-max-prime=20000 run"</span></span><br><span class="line">sysbench 0.4.12:  multi-threaded system evaluation benchmark</span><br><span class="line"></span><br><span class="line">Running the <span class="built_in">test</span> with following options:</span><br><span class="line">Number of threads: 1</span><br><span class="line"></span><br><span class="line">Doing CPU performance benchmark</span><br><span class="line"></span><br><span class="line">Threads started!</span><br><span class="line">Done.</span><br><span class="line"></span><br><span class="line">Maximum prime number checked <span class="keyword">in</span> CPU <span class="built_in">test</span>: 20000</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Test execution summary:</span><br><span class="line">    total time:                          22.6607s</span><br><span class="line">    total number of events:              10000</span><br><span class="line">    total time taken by event execution: 22.6598</span><br><span class="line">    per-request statistics:</span><br><span class="line">         min:                                  2.13ms</span><br><span class="line">         avg:                                  2.27ms</span><br><span class="line">         max:                                 12.10ms</span><br><span class="line">         approx.  95 percentile:               2.88ms</span><br><span class="line"></span><br><span class="line">Threads fairness:</span><br><span class="line">    events (avg/stddev):           10000.0000/0.00</span><br><span class="line">    execution time (avg/stddev):   22.6598/0.00</span><br><span class="line"></span><br><span class="line">[ perf record: Woken up 2 <span class="built_in">times</span> to write data ]</span><br><span class="line">[ perf record: Captured and wrote 4.779 MB perf.data.guest (52461 samples) ]</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
+<p>Perf has recorded the data in <code>perf.data.guest</code> in the current directory. Now to view VM_EXITs,</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$ sudo perf kvm <span class="built_in">stat</span> report --event=vmexit</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Analyze events <span class="keyword">for</span> all VMs, all VCPUs:</span><br><span class="line"></span><br><span class="line">             VM-EXIT    Samples  Samples%     Time%    Min Time    Max Time         Avg time</span><br><span class="line"></span><br><span class="line">           MSR_WRITE       9167    35.40%     0.04%      0.45us   9554.94us      3.00us ( +-  41.94% )</span><br><span class="line">  EXTERNAL_INTERRUPT       5877    22.69%     0.02%      0.37us   1175.48us      2.43us ( +-  17.90% )</span><br><span class="line">    PREEMPTION_TIMER       5728    22.12%     0.01%      0.51us     21.14us      0.62us ( +-   0.87% )</span><br><span class="line">                 HLT       2232     8.62%    99.92%      0.56us 1001118.99us  30567.94us ( +-   9.88% )</span><br><span class="line">               CPUID       2160     8.34%     0.00%      0.40us     12.82us      0.65us ( +-   1.29% )</span><br><span class="line">   PAUSE_INSTRUCTION        390     1.51%     0.00%      0.38us   1490.19us      8.27us ( +-  62.22% )</span><br><span class="line">       EPT_MISCONFIG        303     1.17%     0.01%      1.04us    167.13us     13.33us ( +-   8.61% )</span><br><span class="line">         EOI_INDUCED         37     0.14%     0.00%      0.62us      3.00us      1.24us ( +-   6.58% )</span><br><span class="line">       EXCEPTION_NMI          4     0.02%     0.00%      0.42us      0.56us      0.47us ( +-   6.81% )</span><br><span class="line"></span><br><span class="line">Total Samples:25898, Total events handled time:68281638.61us.</span><br><span class="line"></span><br><span class="line">$</span><br></pre></td></tr></table></figure>
+
+  </div>
+  
+<nav class="footer-nav">
+  
+  
+    <div class="footer-nav__next">
+      <div class="footer-nav__label">
+        Older
       </div>
-    </article>
+      <a href="/kexec-tools-with-the-hidden-purgatory/">
+        kexec - A travel to the purgatory
+      </a>
+    </div>
   
-</div>
+</nav>
 
+
+</article>
 
 
       </div>
