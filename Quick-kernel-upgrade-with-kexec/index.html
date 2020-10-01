@@ -12,22 +12,22 @@
     gtag('config', 'UA-115014323-1');
   </script>
   <meta charset="utf-8">
-  <title>VNC setup in Digitalocean | East River Village</title>
+  <title>Quick kernel upgrade with kexec | East River Village</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
-  <meta name="description" content="Install xfce desktop environment1$ sudo apt-get install xfce4 xfce4-goodies Install TightVNC for VNC server1$ sudo apt-get install tightvncserver Initialize VNC server  run VNC server once enter and v">
-<meta name="keywords" content="digitalocean,setup,vnc,ubuntu">
+  <meta name="description" content="Upgrade kernel of a virtual machine in seconds. Normally kernel upgrade will require a reboot. As reboot will take minutes to complete, service downtime will be more. Here we&apos;ll see how upgrade kernel">
+<meta name="keywords" content="kernel,linux,debian,stretch,kexec,security,upgrade">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VNC setup in Digitalocean">
-<meta property="og:url" content="https://eastrivervillage.com/VNC-setup-in-Digitalocean/index.html">
+<meta property="og:title" content="Quick kernel upgrade with kexec">
+<meta property="og:url" content="https://eastrivervillage.com/Quick-kernel-upgrade-with-kexec/index.html">
 <meta property="og:site_name" content="East River Village">
-<meta property="og:description" content="Install xfce desktop environment1$ sudo apt-get install xfce4 xfce4-goodies Install TightVNC for VNC server1$ sudo apt-get install tightvncserver Initialize VNC server  run VNC server once enter and v">
+<meta property="og:description" content="Upgrade kernel of a virtual machine in seconds. Normally kernel upgrade will require a reboot. As reboot will take minutes to complete, service downtime will be more. Here we&apos;ll see how upgrade kernel">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://eastrivervillage.com/images/vnc_in_digitalocean.png">
-<meta property="og:updated_time" content="2020-08-09T06:51:47.867Z">
+<meta property="og:image" content="https://eastrivervillage.com/images/time_to_upgrade.jpg">
+<meta property="og:updated_time" content="2020-10-01T13:14:26.345Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VNC setup in Digitalocean">
-<meta name="twitter:description" content="Install xfce desktop environment1$ sudo apt-get install xfce4 xfce4-goodies Install TightVNC for VNC server1$ sudo apt-get install tightvncserver Initialize VNC server  run VNC server once enter and v">
-<meta name="twitter:image" content="https://eastrivervillage.com/images/vnc_in_digitalocean.png">
+<meta name="twitter:title" content="Quick kernel upgrade with kexec">
+<meta name="twitter:description" content="Upgrade kernel of a virtual machine in seconds. Normally kernel upgrade will require a reboot. As reboot will take minutes to complete, service downtime will be more. Here we&apos;ll see how upgrade kernel">
+<meta name="twitter:image" content="https://eastrivervillage.com/images/time_to_upgrade.jpg">
   <link rel="icon" href="/favicon.ico">
   
   
@@ -50,14 +50,14 @@
   {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "VNC setup in Digitalocean",
-  "name": "VNC setup in Digitalocean",
-  "image": "/images/vnc_in_digitalocean.png",
-  "datePublished": "2018-03-01T15:56:06.000Z",
-  "dateModified": "2020-08-09T06:51:47.867Z",
+  "headline": "Quick kernel upgrade with kexec",
+  "name": "Quick kernel upgrade with kexec",
+  "image": "/images/time_to_upgrade.jpg",
+  "datePublished": "2020-10-01T12:00:06.000Z",
+  "dateModified": "2020-10-01T13:14:26.345Z",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://eastrivervillage.com/VNC-setup-in-Digitalocean/index.html"
+    "@id": "https://eastrivervillage.com/Quick-kernel-upgrade-with-kexec/index.html"
   },
   "author": {
     "@type": "Person",
@@ -106,68 +106,56 @@
         <article class="post">
   <figure class="post-thumbnail">
     
-  <img src="/images/vnc_in_digitalocean.png" class="thumbnail " alt="VNC setup in Digitalocean">
+  <img src="/images/time_to_upgrade.jpg" class="thumbnail " alt="Quick kernel upgrade with kexec">
 
 
   </figure>
-  <span>2018-03-01
+  <span>2020-10-01
 </span>
-  <h1 class="title">VNC setup in Digitalocean</h1>
+  <h1 class="title">Quick kernel upgrade with kexec</h1>
   
   <div class="tags">
     
-      <a class="tag is-white" style="color: darkmagenta; padding-left:0;" href="/tags/digitalocean/">digitalocean</a>
+      <a class="tag is-white" style="color: darkmagenta; padding-left:0;" href="/tags/kernel/">kernel</a>
     
-      <a class="tag is-white" style="color: darkmagenta; padding-left:0;" href="/tags/setup/">setup</a>
+      <a class="tag is-white" style="color: darkmagenta; padding-left:0;" href="/tags/linux/">linux</a>
     
-      <a class="tag is-white" style="color: darkmagenta; padding-left:0;" href="/tags/vnc/">vnc</a>
+      <a class="tag is-white" style="color: darkmagenta; padding-left:0;" href="/tags/debian/">debian</a>
     
-      <a class="tag is-white" style="color: darkmagenta; padding-left:0;" href="/tags/ubuntu/">ubuntu</a>
+      <a class="tag is-white" style="color: darkmagenta; padding-left:0;" href="/tags/stretch/">stretch</a>
+    
+      <a class="tag is-white" style="color: darkmagenta; padding-left:0;" href="/tags/kexec/">kexec</a>
+    
+      <a class="tag is-white" style="color: darkmagenta; padding-left:0;" href="/tags/security/">security</a>
+    
+      <a class="tag is-white" style="color: darkmagenta; padding-left:0;" href="/tags/upgrade/">upgrade</a>
     
   </div>
 
 
   <div class="content">
-    <p>Install <code>xfce</code> desktop environment<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install xfce4 xfce4-goodies</span><br></pre></td></tr></table></figure></p>
-<p>Install <code>TightVNC</code> for VNC server<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install tightvncserver</span><br></pre></td></tr></table></figure></p>
-<p>Initialize VNC server</p>
-<ul>
-<li>run VNC server once</li>
-<li>enter and verify password</li>
-<li>ignore view-only password<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ vncserver</span><br><span class="line">Password:</span><br><span class="line">Verify:</span><br><span class="line">View-only password:</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>To configure VNC, first kill the running VNC server<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ vncserver -<span class="built_in">kill</span> :1</span><br><span class="line">Killing Xtightvnc process ID 13456</span><br></pre></td></tr></table></figure></p>
-<p>Backup <code>xstartup</code> configuration file<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mv ~/.vnc/xstartup ~/.vnc/xstartup.orig</span><br></pre></td></tr></table></figure></p>
-<p>Edit <code>xstartup</code> file<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim ~/.vnc/xstartup</span><br></pre></td></tr></table></figure></p>
-<p>And add following content<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*~/.vnc/xstartup*</span><br><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">xrdb <span class="variable">$HOME</span>/.Xresources</span><br><span class="line">startxfce4 &amp;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><em>Look at <code>~/.Xresources</code> file for VNC’s GUI framework information</em></li>
-<li><em>Start XFCE whenever VNC server is started</em></li>
-</ul>
-<p>Provide executable permission for <code>~/.vnc/xstartup</code> file<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo chmod +x ~/.vnc/xstartup</span><br></pre></td></tr></table></figure></p>
-<p>Start VNC server<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vncserver -geometry 1280x800</span><br></pre></td></tr></table></figure></p>
+    <p>One of the major issues we are facing is keeping up to date with security patches. That too keeping the kernel up to date is little harder. Because it requires a reboot. As reboot will take minutes to complete, there will be a significant service downtime. Or doing a service migration to avoid downtime will come with its own complexity.</p>
+<p><code>kexec</code> will be help in these situations. It can upgrade the kernel without complete reboot process. Though not zero, the downtime is very less compared to a full reboot. In this post, I’ll demo upgrading kernel of a Virtual machine running Debian-9.</p>
+<p>This VM is running Debian <code>Linux-4.9.0-12</code>. Let me update to the latest kernel available now - <code>Linux-4.9.0-13</code>.</p>
+<p>Install <code>kexec-tools</code><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@debian:~<span class="comment"># apt install kexec-tools -qq</span></span><br></pre></td></tr></table></figure></p>
+<p>Install latest <code>Linux-image</code> package. This will not overwrite the existing kernel or initrd image in your <code>/boot/</code> directory. So you can safely rollback if required.<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">root@debian:~<span class="comment"># ls -lh /boot/</span></span><br><span class="line">total 25M</span><br><span class="line">-rw-r--r-- 1 root root 3.1M Jan 21  2020 System.map-4.9.0-12-amd64</span><br><span class="line">-rw-r--r-- 1 root root 183K Jan 21  2020 config-4.9.0-12-amd64</span><br><span class="line">drwxr-xr-x 5 root root 4.0K Apr 24 12:40 grub</span><br><span class="line">-rw-r--r-- 1 root root  18M Apr 24 12:23 initrd.img-4.9.0-12-amd64</span><br><span class="line">-rw-r--r-- 1 root root 4.1M Jan 21  2020 vmlinuz-4.9.0-12-amd64</span><br><span class="line"></span><br><span class="line">root@debian:~<span class="comment"># sudo apt update -qq</span></span><br><span class="line">43 packages can be upgraded. Run <span class="string">'apt list --upgradable'</span> to see them.</span><br><span class="line"></span><br><span class="line">root@debian:~<span class="comment"># sudo apt install linux-image-amd64 -qq</span></span><br><span class="line">The following additional packages will be installed:</span><br><span class="line">  linux-image-4.9.0-13-amd64</span><br><span class="line">Suggested packages:</span><br><span class="line">  linux-doc-4.9 debian-kernel-handbook</span><br><span class="line">The following NEW packages will be installed:</span><br><span class="line">  linux-image-4.9.0-13-amd64</span><br><span class="line">The following packages will be upgraded:</span><br><span class="line">  linux-image-amd64</span><br><span class="line">1 upgraded, 1 newly installed, 0 to remove and 42 not upgraded.</span><br><span class="line">Need to get 39.3 MB of archives.</span><br><span class="line">After this operation, 193 MB of additional disk space will be used.</span><br><span class="line">Do you want to <span class="built_in">continue</span>? [Y/n] y</span><br><span class="line">Selecting previously unselected package linux-image-4.9.0-13-amd64.</span><br><span class="line">(Reading database ... 26429 files and directories currently installed.)</span><br><span class="line">Preparing to unpack .../linux-image-4.9.0-13-amd64_4.9.228-1_amd64.deb ...</span><br><span class="line">Unpacking linux-image-4.9.0-13-amd64 (4.9.228-1) ...........................]</span><br><span class="line">Preparing to unpack .../linux-image-amd64_4.9+80+deb9u11_amd64.deb .........]</span><br><span class="line">Unpacking linux-image-amd64 (4.9+80+deb9u11) over (4.9+80+deb9u10) .........]</span><br><span class="line">Setting up linux-image-4.9.0-13-amd64 (4.9.228-1) ..........................]</span><br><span class="line">I: /vmlinuz is now a symlink to boot/vmlinuz-4.9.0-13-amd64.................]</span><br><span class="line">I: /initrd.img is now a symlink to boot/initrd.img-4.9.0-13-amd64</span><br><span class="line">/etc/kernel/postinst.d/initramfs-tools:</span><br><span class="line">update-initramfs: Generating /boot/initrd.img-4.9.0-13-amd64</span><br><span class="line">/etc/kernel/postinst.d/zz-update-grub:</span><br><span class="line">Generating grub configuration file ...</span><br><span class="line">Found linux image: /boot/vmlinuz-4.9.0-13-amd64</span><br><span class="line">Found initrd image: /boot/initrd.img-4.9.0-13-amd64</span><br><span class="line">Found linux image: /boot/vmlinuz-4.9.0-12-amd64</span><br><span class="line">Found initrd image: /boot/initrd.img-4.9.0-12-amd64</span><br><span class="line"><span class="keyword">done</span></span><br><span class="line">Setting up linux-image-amd64 (4.9+80+deb9u11) ...<span class="comment">###########................]</span></span><br><span class="line"></span><br><span class="line">root@debian:~<span class="comment"># ls -lh /boot/</span></span><br><span class="line">total 50M</span><br><span class="line">-rw-r--r-- 1 root root 3.1M Jan 21  2020 System.map-4.9.0-12-amd64</span><br><span class="line">-rw-r--r-- 1 root root 3.1M Jul  6 02:59 System.map-4.9.0-13-amd64   &lt;---</span><br><span class="line">-rw-r--r-- 1 root root 183K Jan 21  2020 config-4.9.0-12-amd64</span><br><span class="line">-rw-r--r-- 1 root root 183K Jul  6 02:59 config-4.9.0-13-amd64       &lt;---</span><br><span class="line">drwxr-xr-x 5 root root 4.0K Oct  1 17:25 grub</span><br><span class="line">-rw-r--r-- 1 root root  18M Apr 24 12:23 initrd.img-4.9.0-12-amd64</span><br><span class="line">-rw-r--r-- 1 root root  18M Oct  1 17:25 initrd.img-4.9.0-13-amd64   &lt;---</span><br><span class="line">-rw-r--r-- 1 root root 4.1M Jan 21  2020 vmlinuz-4.9.0-12-amd64</span><br><span class="line">-rw-r--r-- 1 root root 4.1M Jul  6 02:59 vmlinuz-4.9.0-13-amd64      &lt;---</span><br></pre></td></tr></table></figure></p>
+<p>Now copy the kernel command line from <code>/proc/cmdline</code>. We should pass this to <code>kexec</code>.<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root@debian:~<span class="comment"># cat /proc/cmdline</span></span><br><span class="line">BOOT_IMAGE=/boot/vmlinuz-4.9.0-12-amd64 root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx ro net.ifnames=0 biosdevname=0 cgroup_enable=memory console=tty0 console=ttyS0,115200 notsc scsi_mod.use_blk_mq=Y quiet</span><br></pre></td></tr></table></figure></p>
+<p>Load the new kernel using <code>kexec -l</code>.<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root@debian:~<span class="comment"># kexec -l /boot/vmlinuz-4.9.0-13-amd64 --initrd=/boot/initrd.img-4.9.0-13-amd64 --command-line="BOOT_IMAGE=/boot/vmlinuz-4.9.0-13-amd64 root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx ro net.ifnames=0 biosdevname=0 cgroup_enable=memory console=tty0 console=ttyS0,115200 notsc scsi_mod.use_blk_mq=Y quiet"</span></span><br><span class="line">root@debian:~<span class="comment">#</span></span><br></pre></td></tr></table></figure></p>
+<p>Now upgrade to the new kernel.<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">root@debian:~<span class="comment"># uname -a</span></span><br><span class="line">Linux debian 4.9.0-12-amd64 <span class="comment">#1 SMP Debian 4.9.210-1 (2020-01-20) x86_64 GNU/Linux</span></span><br><span class="line"></span><br><span class="line">root@debian:~<span class="comment"># systemctl start kexec.target</span></span><br><span class="line">[268181.341191] kexec_core: Starting new kernel</span><br><span class="line">/dev/sda1: clean, 35704/655360 files, 366185/2621179 blocks</span><br><span class="line">GROWROOT: NOCHANGE: partition 1 is size 20969439. it cannot be grown</span><br><span class="line"></span><br><span class="line">Debian GNU/Linux 9 debian ttyS0</span><br><span class="line"></span><br><span class="line">debian login: root</span><br><span class="line">Password:</span><br><span class="line">Last login: Mon Sep 28 14:59:30 IST 2020 on ttyS0</span><br><span class="line">Linux debian 4.9.0-13-amd64 <span class="comment">#1 SMP Debian 4.9.228-1 (2020-07-05) x86_64</span></span><br><span class="line"></span><br><span class="line">The programs included with the Debian GNU/Linux system are free software;</span><br><span class="line">the exact distribution terms <span class="keyword">for</span> each program are described <span class="keyword">in</span> the</span><br><span class="line">individual files <span class="keyword">in</span> /usr/share/doc/*/copyright.</span><br><span class="line"></span><br><span class="line">Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent</span><br><span class="line">permitted by applicable law.</span><br><span class="line"></span><br><span class="line">root@debian:~<span class="comment"># uname -a</span></span><br><span class="line">Linux debian 4.9.0-13-amd64 <span class="comment">#1 SMP Debian 4.9.228-1 (2020-07-05) x86_64 GNU/Linux</span></span><br><span class="line">root@debian:~<span class="comment">#</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Time-to-upgrade"><a href="#Time-to-upgrade" class="headerlink" title="Time to upgrade"></a>Time to upgrade</h2><p>This actually took no time. I was pinging this VM from its Host. There was a slight increase in latency while the upgrade was in progress. That was less than a second. But I didn’t run any service and tested its status after reboot. Because it may vary from service to service.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">64 bytes from 192.168.122.91: icmp_seq=176 ttl=64 time=0.465 ms</span><br><span class="line">64 bytes from 192.168.122.91: icmp_seq=177 ttl=64 time=0.408 ms</span><br><span class="line">64 bytes from 192.168.122.91: icmp_seq=181 ttl=64 time=8.32 ms   &lt;---</span><br><span class="line">64 bytes from 192.168.122.91: icmp_seq=182 ttl=64 time=0.452 ms</span><br><span class="line">64 bytes from 192.168.122.91: icmp_seq=183 ttl=64 time=0.198 ms</span><br></pre></td></tr></table></figure>
 
   </div>
   
 <nav class="footer-nav">
-  
-    <div class="footer-nav__prev">
-      <div class="footer-nav__label">
-        Newer
-      </div>
-      <a href="/git-from-facebook/">
-        Github from Facebook
-      </a>
-    </div>
   
   
     <div class="footer-nav__next">
       <div class="footer-nav__label">
         Older
       </div>
-      <a href="/Auto-deploy-from-Bitbucket-or-any-other-git-repository/">
-        Auto deploy from Bitbucket or any other git repository
+      <a href="/perf-kvm-to-profile-vm-exit/">
+        perf kvm to profile vm_exit
       </a>
     </div>
   
